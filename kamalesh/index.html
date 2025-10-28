@@ -99,12 +99,54 @@
             background-color: #f9fafb;
             border-radius: 8px;
         }
+        .timeline-container {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+        .timeline-bar {
+            background: linear-gradient(to right, #2563eb, #7c3aed);
+            height: 8px;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+        }
+        .timeline-dates {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+        .timeline-date {
+            font-size: 13px;
+            color: #374151;
+            font-weight: 500;
+        }
+        .timeline-date strong {
+            display: block;
+            font-size: 16px;
+            color: #1f2937;
+            margin-bottom: 2px;
+        }
     </style>
 </head>
 <body>
 
 <h1>Flutter UI Assignment - <span id="studentName">Ajay Kannan</span></h1>
 <div class="subtitle">7-Day Challenge</div>
+
+<div class="timeline-container">
+    <div class="timeline-bar"></div>
+    <div class="timeline-dates">
+        <div class="timeline-date">
+            <strong id="startDate">Oct 28, 2025</strong>
+            Start Date
+        </div>
+        <div class="timeline-date" style="text-align: right;">
+            <strong id="endDate">Nov 4, 2025</strong>
+            End Date
+        </div>
+    </div>
+</div>
 
 <h2>1. Requirements</h2>
 
@@ -186,6 +228,8 @@
 if (typeof DATA !== 'undefined') {
     document.getElementById('studentName').textContent = DATA.name;
     document.getElementById('uiLink').href = DATA.uiLink;
+    if (DATA.startDate) document.getElementById('startDate').textContent = DATA.startDate;
+    if (DATA.endDate) document.getElementById('endDate').textContent = DATA.endDate;
 } else {
     document.getElementById('studentName').textContent = '';
 }
