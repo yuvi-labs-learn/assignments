@@ -230,6 +230,7 @@ if (typeof DATA !== 'undefined') {
     document.getElementById('uiLink').href = DATA.uiLink;
     if (DATA.startDate) document.getElementById('startDate').textContent = DATA.startDate;
     if (DATA.endDate) document.getElementById('endDate').textContent = DATA.endDate;
+    document.title = DATA.name;
 } else {
     document.getElementById('studentName').textContent = '';
 }
