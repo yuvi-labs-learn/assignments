@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuvi Labs Weekly Challenge</title>
+    <title>Thanks for Visiting</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMHW6N1HLT"></script>
     <script>
@@ -12,9 +12,6 @@
       gtag('js', new Date());
       gtag('config', 'G-NMHW6N1HLT');
     </script>
-    <!-- Material 3 Design -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -23,126 +20,171 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            padding: 24px;
-            line-height: 1.5;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        header {
-            margin-bottom: 32px;
-        }
-
-        h1 {
-            font-size: 28px;
-            font-weight: 500;
-            color: #1f1f1f;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            font-size: 16px;
-            color: #5f6368;
-        }
-
-        .card-list {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #e2e8f0 0%, #f7fafc 100%);
             display: flex;
-            flex-direction: column;
-            gap: 16px;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
         }
 
         .card {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            transition: all 0.2s ease;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
             overflow: hidden;
+            padding: 60px 40px;
+            text-align: center;
         }
 
-        .card:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+        .decorative-blob {
+            position: absolute;
+            z-index: 0;
         }
 
-        .card a {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 24px;
-            text-decoration: none;
-            color: inherit;
+        .blob-top-left {
+            top: -50px;
+            left: -50px;
         }
 
-        .card-content {
-            display: flex;
-            align-items: center;
-            gap: 16px;
+        .blob-bottom-right {
+            bottom: -50px;
+            right: -50px;
         }
 
-        .card-title {
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            color: #52C9A8;
+            font-weight: 600;
             font-size: 18px;
-            font-weight: 500;
-            color: #1f1f1f;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .card-icon {
-            color: #5f6368;
-            font-size: 20px;
+        .illustration {
+            margin: 20px auto 40px;
+            max-width: 280px;
+        }
+
+        h1 {
+            color: #2D3748;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .message {
+            color: #718096;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 32px;
+            background: #52C9A8;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #45b694;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(82, 201, 168, 0.3);
         }
 
         @media (max-width: 640px) {
-            body {
-                padding: 16px;
+            .card {
+                padding: 40px 24px;
             }
 
             h1 {
-                font-size: 24px;
+                font-size: 26px;
             }
 
-            .card a {
-                padding: 16px 20px;
+            .illustration {
+                max-width: 220px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Yuvi Labs</h1>
-            <p class="subtitle">Flutter UI 7-Day Challenge</p>
-        </header>
+    <div class="card">
+        <!-- Decorative blob - top left -->
+        <svg class="decorative-blob blob-top-left" width="200" height="200" viewBox="0 0 200 200">
+            <path d="M45,-65C58,-55,68,-43,73,-28C78,-13,77,5,72,21C67,37,57,51,44,60C31,69,15,73,-2,76C-19,79,-38,81,-51,73C-64,65,-71,47,-74,29C-77,11,-76,-7,-70,-23C-64,-39,-53,-53,-40,-63C-27,-73,-14,-79,1,-81C16,-83,32,-75,45,-65Z" transform="translate(100 100)" fill="#52C9A8" opacity="0.1"/>
+            <circle cx="60" cy="80" r="2" fill="#2D3748" opacity="0.1"/>
+            <circle cx="75" cy="65" r="2" fill="#2D3748" opacity="0.1"/>
+            <circle cx="90" cy="90" r="2" fill="#2D3748" opacity="0.1"/>
+            <circle cx="55" cy="100" r="2" fill="#2D3748" opacity="0.1"/>
+        </svg>
 
-        <div class="card-list">
-            <div class="card">
-                <a href="ajay_kannan/index.html">
-                    <div class="card-content">
-                        <span class="card-title">Ajay Kannan</span>
-                    </div>
-                    <span class="material-icons card-icon">chevron_right</span>
-                </a>
+        <!-- Decorative blob - bottom right -->
+        <svg class="decorative-blob blob-bottom-right" width="200" height="200" viewBox="0 0 200 200">
+            <path d="M40,-58C51,-48,59,-37,64,-24C69,-11,71,4,68,18C65,32,58,45,47,55C36,65,21,72,5,75C-11,78,-27,77,-40,69C-53,61,-63,46,-68,30C-73,14,-73,-3,-68,-19C-63,-35,-53,-50,-40,-60C-27,-70,-14,-75,1,-77C16,-79,29,-68,40,-58Z" transform="translate(100 100)" fill="#52C9A8" opacity="0.1"/>
+            <circle cx="120" cy="110" r="2" fill="#2D3748" opacity="0.1"/>
+            <circle cx="135" cy="125" r="2" fill="#2D3748" opacity="0.1"/>
+            <circle cx="145" cy="95" r="2" fill="#2D3748" opacity="0.1"/>
+            <circle cx="110" cy="130" r="2" fill="#2D3748" opacity="0.1"/>
+        </svg>
+
+        <div class="content">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="18" height="18" rx="4" fill="#52C9A8"/>
+                    <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Yuvi Labs
             </div>
 
-            <div class="card">
-                <a href="deepak/index.html">
-                    <div class="card-content">
-                        <span class="card-title">Deepak Kumar</span>
-                    </div>
-                    <span class="material-icons card-icon">chevron_right</span>
-                </a>
-            </div>
+            <!-- Simple illustration -->
+            <svg class="illustration" viewBox="0 0 300 200" fill="none">
+                <!-- Background shape -->
+                <ellipse cx="150" cy="170" rx="80" ry="15" fill="#52C9A8" opacity="0.2"/>
 
-            <div class="card">
-                <a href="kamalesh/index.html">
-                    <div class="card-content">
-                        <span class="card-title">Kamalesh</span>
-                    </div>
-                    <span class="material-icons card-icon">chevron_right</span>
-                </a>
-            </div>
+                <!-- Laptop -->
+                <rect x="90" y="120" width="120" height="80" rx="4" fill="#2D3748" opacity="0.1"/>
+                <rect x="95" y="125" width="110" height="60" rx="2" fill="white" stroke="#2D3748" stroke-width="2"/>
+                <line x1="100" y1="130" x2="140" y2="130" stroke="#52C9A8" stroke-width="2" stroke-linecap="round"/>
+                <line x1="100" y1="140" x2="160" y2="140" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+                <line x1="100" y1="150" x2="150" y2="150" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+                <rect x="80" y="185" width="140" height="4" rx="2" fill="#2D3748" opacity="0.2"/>
+
+                <!-- Person -->
+                <circle cx="150" cy="60" r="20" fill="#FFE4C4" stroke="#2D3748" stroke-width="2"/>
+                <path d="M150 78 Q140 95 135 110 L145 110 L145 130 L155 130 L155 110 L165 110 Q160 95 150 78Z" fill="#52C9A8" stroke="#2D3748" stroke-width="2"/>
+
+                <!-- Arms -->
+                <path d="M135 90 Q120 95 115 105" stroke="#FFE4C4" stroke-width="6" stroke-linecap="round"/>
+                <path d="M165 90 Q170 100 168 110" stroke="#FFE4C4" stroke-width="6" stroke-linecap="round"/>
+
+                <!-- Checkmark icon -->
+                <circle cx="220" cy="70" r="18" fill="#52C9A8" opacity="0.2"/>
+                <circle cx="220" cy="70" r="14" fill="white" stroke="#52C9A8" stroke-width="2"/>
+                <path d="M215 70 L218 73 L225 66" stroke="#52C9A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <h1>Thanks for visiting!</h1>
+            <p class="message">Assignments for this cohort have ended.</p>
+            <p class="message">We hope you learned a lot during this journey.</p>
         </div>
     </div>
 </body>
