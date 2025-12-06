@@ -1,6 +1,6 @@
 const DATA = {
-  "name": "Kamalesh",
+  "name": "Nandha Kumar",
   "uiLink": "https://dribbble.com/shots/25989629-Travel-mobile-app",
-  "startDate": "Oct 28, 2025",
-  "endDate": "Nov 4, 2025"
+  "startDate": "Dec 8, 2025",
+  "endDate": "Dec 15, 2025"
 };
