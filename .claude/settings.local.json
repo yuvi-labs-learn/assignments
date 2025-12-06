@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(./copy_template.sh:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

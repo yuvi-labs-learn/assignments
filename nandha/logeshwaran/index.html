@@ -160,12 +160,6 @@
 
 <div class="mockup-container">
     <img src="screen.png" alt="E-commerce UI Mockup">
-    <div style="margin-top: 15px; padding: 15px; background-color: #eff6ff; border-radius: 8px; border-left: 4px solid #2563eb;">
-        <p style="margin: 0;"><strong>📌 Design Source:</strong>
-        <a id="uiLink" href="https://dribbble.com/shots/25304102-Ecommerce-App" target="_blank" style="color: #2563eb; font-weight: bold; text-decoration: underline;">
-            Click here for the image source
-        </a></p>
-    </div>
 </div>
 
 <ol style="margin-top: 20px;">
@@ -261,7 +255,6 @@
 <script>
 if (typeof DATA !== 'undefined') {
     document.getElementById('studentName').textContent = DATA.name;
-    document.getElementById('uiLink').href = DATA.uiLink;
     if (DATA.startDate) document.getElementById('startDate').textContent = DATA.startDate;
     if (DATA.endDate) document.getElementById('endDate').textContent = DATA.endDate;
     document.title = DATA.name;

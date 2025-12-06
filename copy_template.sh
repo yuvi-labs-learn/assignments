@@ -1,10 +1,21 @@
 #!/bin/bash
 
-for dir in /Users/yuva/workspace/claude/weekly_assign/assignments/*/; do
+# Check if argument provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <target_folder>"
+    exit 1
+fi
+
+target_folder="$1"
+script_dir="$(dirname "$0")"
+
+# Loop through subdirectories
+for dir in "$target_folder"/*/; do
     if [ -d "$dir" ]; then
         folder_name=$(basename "$dir")
-        if [ "$folder_name" != "$(basename $(dirname $0))" ]; then
-            cp /Users/yuva/workspace/claude/weekly_assign/assignments/template.html "$dir/index.html"
+        # Skip template directory
+        if [ "$folder_name" != "template" ]; then
+            cp "$script_dir/template/index.html" "$dir/index.html"
             echo "Copied to $folder_name/index.html"
         fi
     fi
