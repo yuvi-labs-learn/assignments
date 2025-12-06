@@ -19,6 +19,7 @@
             padding: 20px;
             line-height: 1.6;
             color: #333;
+            counter-reset: section;
         }
         h1 {
             color: #1a1a1a;
@@ -39,6 +40,8 @@
             margin-bottom: 15px;
             border-bottom: 2px solid #e5e7eb;
             padding-bottom: 8px;
+            counter-increment: section;
+            counter-reset: item;
         }
         h3 {
             color: #374151;
@@ -70,6 +73,17 @@
         }
         li {
             margin-bottom: 8px;
+        }
+        /* Nested numbering for ordered lists */
+        h2 ~ ol {
+            list-style: none;
+        }
+        h2 ~ ol > li {
+            counter-increment: item;
+        }
+        h2 ~ ol > li::before {
+            content: counter(section) "." counter(item) " ";
+            font-weight: bold;
         }
         .mockup-container {
             text-align: center;
@@ -187,8 +201,8 @@
 <ol>
     <li>Create 8 separate Flutter projects (day0/ through day7/)</li>
     <li>Each project must be a complete and runnable Flutter application</li>
-    <li>Include a README.md to mention the changes that you have done for the day and your learnings</li>
-    <li>Include screenshot.png in each folder</li>
+    <li>Include a <code>README.md</code> to mention the changes that you have done for the day and your learnings</li>
+    <li>Include <code>screenshot.png</code> in each folder</li>
     <li>Commit to GitHub daily</li>
 </ol>
 
